@@ -521,11 +521,6 @@ def do_authentication(environ, start_response, authn_context, key, redirect_uri,
 
 
 PASSWD = {
-    "daev0001": "qwerty",
-    "testuser": "qwerty",
-    "roland": "dianakra",
-    "babs": "howes",
-    "upper": "crust",
     "emusk":"elonmuskisbest"
 }
 
@@ -1114,4 +1109,7 @@ if __name__ == "__main__":
     try:
         SRV.start()
     except KeyboardInterrupt:
+        SRV.stop()
+    except Exception as e:
+        logger.exception("Exception: %s", e)
         SRV.stop()
