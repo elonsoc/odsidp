@@ -34,6 +34,71 @@ def render_body(context,**pageargs):
         __M_writer('\n')
         __M_writer('<html>\n<head><title>IDP test login</title>\n    ')
         __M_writer(str(self.css()))
+        __M_writer("""\n    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.header h1 a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+h1 {
+    color: #444;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+                   </style>
+""")
         __M_writer('\n    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n</head>\n<body>\n    ')
         __M_writer(str(pre()))
         __M_writer('\n')
